@@ -45,7 +45,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/button_border"
-        android:text="Agenda de Eventos"
+        android:text="Programação"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
