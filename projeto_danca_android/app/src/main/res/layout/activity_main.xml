@@ -111,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLeakotId" />
 
     <Button
-        android:id="@+id/btnKapaimId2"
+        android:id="@+id/btnSugerirId"
         android:layout_width="209dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
@@ -155,7 +155,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnKapaimId2"
+        app:layout_constraintBottom_toTopOf="@+id/btnSugerirId"
         app:layout_constraintEnd_toStartOf="@+id/btnKapaimId"
         app:layout_constraintTop_toBottomOf="@+id/btnLeakotId"
         app:srcCompat="@drawable/estrela"

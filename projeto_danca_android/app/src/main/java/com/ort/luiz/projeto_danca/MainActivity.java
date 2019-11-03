@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference acontecendoRef;
 
     TextView scrollingText;
-    Button btnEventos, btnLeakot, btnKapaim;
+    Button btnEventos, btnLeakot, btnKapaim, btnSugerir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +44,12 @@ public class MainActivity extends AppCompatActivity {
         btnKapaim.setOnClickListener(V->{
             btnKapaim.setBackgroundResource(R.color.White);
             startActivity(new Intent(this, KapaimActivity.class));
+        });
+
+        btnSugerir = findViewById(R.id.btnSugerirId);
+        btnSugerir.setOnClickListener(V -> {
+            btnSugerir.setBackgroundResource(R.color.White);
+            startActivity(new Intent(this, PedidoActivity.class));
         });
 
         acontecendoRef.addValueEventListener(new ValueEventListener() {
