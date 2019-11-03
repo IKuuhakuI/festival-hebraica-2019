@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hebraica"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/scrollingTextId"
@@ -33,9 +33,9 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:scrollHorizontally="true"
         android:singleLine="true"
-        android:text="Conecte-se a internet para receber as notificações"
+        android:text="@string/conecte_se_a_internet_para_receber_as_notifica_es"
         android:textColor="@android:color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +45,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_border"
-        android:text="Programação"
+        android:text="@string/programa_o"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_border"
-        android:text="Lehakot"
+        android:text="@string/lehakot"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginBottom="3dp"
-        android:text="Por: Luiz Carlos Aguiar Carrion"
+        android:text="@string/por_luiz_carlos_aguiar_carrion"
         android:textColor="@android:color/black"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -104,7 +104,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_border"
-        android:text="Kapaim"
+        android:text="@string/kapaim"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +116,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/button_border"
-        android:text="Sugerir Músicas"
+        android:text="@string/sugerir_m_sicas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -132,7 +132,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:srcCompat="@drawable/logo_festival_2019" />
+        app:srcCompat="@drawable/logo_festival_2019"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -145,7 +146,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnLeakotId"
         app:layout_constraintTop_toBottomOf="@+id/btnEventosId"
-        app:srcCompat="@drawable/estrela" />
+        app:srcCompat="@drawable/estrela"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -156,6 +158,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnKapaimId2"
         app:layout_constraintEnd_toStartOf="@+id/btnKapaimId"
         app:layout_constraintTop_toBottomOf="@+id/btnLeakotId"
-        app:srcCompat="@drawable/estrela" />
+        app:srcCompat="@drawable/estrela"
+        android:contentDescription="@string/todo" />
 
 </android.support.constraint.ConstraintLayout>
