@@ -7,7 +7,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -15,9 +19,12 @@ import java.util.Date;
 
 public class PedidoActivity extends AppCompatActivity {
     FirebaseDatabase database;
+    DatabaseReference idRef;
 
     TextView txtNome, txtEmail, txtPedido;
     Button btnVoltarEventos, btnEnviar;
+
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +60,29 @@ public class PedidoActivity extends AppCompatActivity {
 
             String hora_atual = dateFormat_hora.format(data_atual);
 
-            alert(hora_atual);
+            idRef = database.getReference("Pedidos");
+            idRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    id = String.valueOf(Integer.parseInt(dataSnapshot.child("QuantidadePedidos").getValue().toString()) + 1);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                }
+            });
+
+            alert(id);
+            if(id != null) {
+                idRef.child(id).child("Nome_Pessoa").setValue(nome);
+                idRef.child(id).child("Email_Pessoa").setValue(email);
+                idRef.child(id).child("Horario_Pedido").setValue(hora_atual);
+                idRef.child(id).child("Pedido").setValue(pedido);
+
+                idRef.child("QuantidadePedidos").setValue(id);
+            }
         }));
+
     }
 
     private void alert(String msg){
