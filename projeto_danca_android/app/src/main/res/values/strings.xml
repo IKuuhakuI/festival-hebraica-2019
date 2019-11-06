@@ -7,4 +7,9 @@
     <string name="kapaim">Kapaim</string>
     <string name="sugerir_m_sicas">Sugerir Músicas</string>
     <string name="conecte_se_a_internet_para_receber_as_notifica_es">Conecte-se a internet para receber as notificações</string>
+    <string name="pedido">Pedido</string>
+    <string name="email">Email</string>
+    <string name="voltar">Voltar</string>
+    <string name="nome">Nome</string>
+    <string name="enviar">Enviar</string>
 </resources>
