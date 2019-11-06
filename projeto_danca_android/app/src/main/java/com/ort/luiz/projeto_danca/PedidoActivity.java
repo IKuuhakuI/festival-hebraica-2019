@@ -41,7 +41,21 @@ public class PedidoActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         });
 
+
         btnEnviar.setOnClickListener((v -> {
+            idRef = database.getReference("Pedidos");
+            idRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    id = String.valueOf(Integer.parseInt(dataSnapshot.child("QuantidadePedidos").getValue().toString()) + 1);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    alert(databaseError.getMessage());
+                }
+            });
+
             btnEnviar.setBackgroundResource(R.color.White);
 
             txtNome = findViewById(R.id.txtNomeId);
@@ -60,19 +74,8 @@ public class PedidoActivity extends AppCompatActivity {
 
             String hora_atual = dateFormat_hora.format(data_atual);
 
-            idRef = database.getReference("Pedidos");
-            idRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    id = String.valueOf(Integer.parseInt(dataSnapshot.child("QuantidadePedidos").getValue().toString()) + 1);
-                }
 
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                }
-            });
 
-            alert(id);
             if(id != null) {
                 idRef.child(id).child("Nome_Pessoa").setValue(nome);
                 idRef.child(id).child("Email_Pessoa").setValue(email);
@@ -80,6 +83,8 @@ public class PedidoActivity extends AppCompatActivity {
                 idRef.child(id).child("Pedido").setValue(pedido);
 
                 idRef.child("QuantidadePedidos").setValue(id);
+            } else {
+                alert("Clique novamente para confirmar");
             }
         }));
 
