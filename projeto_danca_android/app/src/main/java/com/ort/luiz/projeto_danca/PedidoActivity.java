@@ -43,7 +43,7 @@ public class PedidoActivity extends AppCompatActivity {
 
 
         btnEnviar.setOnClickListener((v -> {
-            idRef = database.getReference("Pedidos");
+            idRef = database.getReference("PedidosAndroid");
             idRef.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
