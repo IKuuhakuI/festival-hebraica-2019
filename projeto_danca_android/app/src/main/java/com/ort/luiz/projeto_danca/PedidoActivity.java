@@ -21,7 +21,7 @@ public class PedidoActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference idRef;
 
-    TextView txtNome, txtEmail, txtPedido;
+    TextView txtPedido;
     Button btnVoltarEventos, btnEnviar;
 
     String id;
@@ -58,14 +58,10 @@ public class PedidoActivity extends AppCompatActivity {
 
             btnEnviar.setBackgroundResource(R.color.White);
 
-            txtNome = findViewById(R.id.txtNomeId);
-            txtEmail = findViewById(R.id.txtEmailId);
             txtPedido = findViewById(R.id.txtPedidoId);
 
             SimpleDateFormat dateFormat_hora = new SimpleDateFormat("HH:mm:ss");
 
-            String nome = txtNome.getText().toString();
-            String email = txtEmail.getText().toString();
             String pedido = txtPedido.getText().toString();
 
             Calendar cal = Calendar.getInstance();
@@ -77,12 +73,11 @@ public class PedidoActivity extends AppCompatActivity {
 
 
             if(id != null) {
-                idRef.child(id).child("Nome_Pessoa").setValue(nome);
-                idRef.child(id).child("Email_Pessoa").setValue(email);
                 idRef.child(id).child("Horario_Pedido").setValue(hora_atual);
                 idRef.child(id).child("Pedido").setValue(pedido);
 
                 idRef.child("QuantidadePedidos").setValue(id);
+                alert("Pedido Enviado com Sucesso");
             } else {
                 alert("Clique novamente para confirmar");
             }
@@ -91,6 +86,6 @@ public class PedidoActivity extends AppCompatActivity {
     }
 
     private void alert(String msg){
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }
