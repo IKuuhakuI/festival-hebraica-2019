@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnVoltarOrdemId2"
+        android:id="@+id/btnShow1Id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -27,12 +27,12 @@
         android:layout_marginEnd="8dp"
         android:background="@color/White"
         android:text="Show 1"
-        app:layout_constraintEnd_toStartOf="@+id/btnVoltarOrdemId3"
+        app:layout_constraintEnd_toStartOf="@+id/btnShow2Id"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <Button
-        android:id="@+id/btnVoltarOrdemId3"
+        android:id="@+id/btnShow2Id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -40,12 +40,12 @@
         android:layout_marginEnd="8dp"
         android:background="@color/White"
         android:text="Show 2"
-        app:layout_constraintEnd_toStartOf="@+id/btnVoltarOrdemId4"
-        app:layout_constraintStart_toEndOf="@+id/btnVoltarOrdemId2"
+        app:layout_constraintEnd_toStartOf="@+id/btnShow3Id"
+        app:layout_constraintStart_toEndOf="@+id/btnShow1Id"
         app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <Button
-        android:id="@+id/btnVoltarOrdemId4"
+        android:id="@+id/btnShow3Id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -53,12 +53,12 @@
         android:layout_marginEnd="8dp"
         android:background="@color/White"
         android:text="Show 3"
-        app:layout_constraintEnd_toStartOf="@+id/btnVoltarOrdemId5"
-        app:layout_constraintStart_toEndOf="@+id/btnVoltarOrdemId3"
+        app:layout_constraintEnd_toStartOf="@+id/btnShow4Id"
+        app:layout_constraintStart_toEndOf="@+id/btnShow2Id"
         app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <Button
-        android:id="@+id/btnVoltarOrdemId5"
+        android:id="@+id/btnShow4Id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -67,7 +67,7 @@
         android:background="@color/White"
         android:text="Show 4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnVoltarOrdemId4"
+        app:layout_constraintStart_toEndOf="@+id/btnShow3Id"
         app:layout_constraintTop_toBottomOf="@+id/imageView26" />
 
     <ImageView
@@ -111,7 +111,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnVoltarOrdemId"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVoltarOrdemId3"
+        app:layout_constraintTop_toBottomOf="@+id/btnShow2Id"
         app:srcCompat="@drawable/icon_app" />
 
 </android.support.constraint.ConstraintLayout>

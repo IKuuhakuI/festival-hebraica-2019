@@ -18,7 +18,9 @@ public class OrdemActivity extends AppCompatActivity {
 
     TextView scrollingText;
 
-    Button btnVoltarOrdem;
+    Button btnVoltarOrdem, btnShow1, btnShow2, btnShow3, btnShow4;
+
+    String selecionado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,43 @@ public class OrdemActivity extends AppCompatActivity {
         btnVoltarOrdem.setOnClickListener((V)->{
             btnVoltarOrdem.setBackgroundResource(R.color.White);
             startActivity(new Intent(this, MainActivity.class));
+        });
+
+        btnShow1 = findViewById(R.id.btnShow1Id);
+        btnShow2 = findViewById(R.id.btnShow2Id);
+        btnShow3 = findViewById(R.id.btnShow3Id);
+        btnShow4 = findViewById(R.id.btnShow4Id);
+
+        btnShow1.setOnClickListener((V) -> {
+            selecionado = "Show1";
+            btnShow1.setBackgroundResource(R.color.White);
+            btnShow2.setBackgroundResource(R.drawable.button_border);
+            btnShow3.setBackgroundResource(R.drawable.button_border);
+            btnShow4.setBackgroundResource(R.drawable.button_border);
+        });
+
+        btnShow2.setOnClickListener((V) -> {
+            selecionado = "Show2";
+            btnShow1.setBackgroundResource(R.drawable.button_border);
+            btnShow2.setBackgroundResource(R.color.White);
+            btnShow3.setBackgroundResource(R.drawable.button_border);
+            btnShow4.setBackgroundResource(R.drawable.button_border);
+        });
+
+        btnShow3.setOnClickListener((V) -> {
+            selecionado = "Show3";
+            btnShow1.setBackgroundResource(R.drawable.button_border);
+            btnShow2.setBackgroundResource(R.drawable.button_border);
+            btnShow3.setBackgroundResource(R.color.White);
+            btnShow4.setBackgroundResource(R.drawable.button_border);
+        });
+
+        btnShow4.setOnClickListener((V) -> {
+            selecionado = "Show4";
+            btnShow1.setBackgroundResource(R.drawable.button_border);
+            btnShow2.setBackgroundResource(R.drawable.button_border);
+            btnShow3.setBackgroundResource(R.drawable.button_border);
+            btnShow4.setBackgroundResource(R.color.White);
         });
     }
 
