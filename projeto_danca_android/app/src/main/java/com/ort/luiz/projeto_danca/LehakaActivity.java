@@ -23,6 +23,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class LehakaActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference acontecendoRef, lehakotExemploRef;
@@ -133,7 +135,7 @@ public class LehakaActivity extends AppCompatActivity {
 
                 horarios = getApresentacoes.split(", ");
 
-                palmas = Integer.parseInt(dataSnapshot.child("kapaim").getValue().toString());
+                palmas = Integer.parseInt(Objects.requireNonNull(dataSnapshot.child("kapaim").getValue()).toString());
 
                 ArrayAdapter<String> adaptadorHorario = new ArrayAdapter<>(
                         getApplicationContext(), // contexto da aplicação
@@ -148,9 +150,9 @@ public class LehakaActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) { }});
 
         btnVotar = findViewById(R.id.btnVotarBetarId);
-
         btnVotar.setOnClickListener(v -> {
-            if(isVotable == true) {
+            if(isVotable) {
+                alert("Obrigado por votar");
                 palmas += 1;
                 lehakotExemploRef.child("kapaim").setValue(palmas);
             }
@@ -219,6 +221,6 @@ public class LehakaActivity extends AppCompatActivity {
     }
 
     private void alert(String msg){
-        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
     }
 }
