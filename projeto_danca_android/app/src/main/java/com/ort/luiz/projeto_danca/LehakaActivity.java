@@ -46,6 +46,7 @@ public class LehakaActivity extends AppCompatActivity {
     String urlNet = "";
     String urlFace = "";
     String urlInsta = "";
+    String descricao = "Lehaka não possui descrição";
 
     private AlertDialog alerta;
 
@@ -84,7 +85,7 @@ public class LehakaActivity extends AppCompatActivity {
 
             builder.setTitle("Descrição");
 
-            builder.setMessage("Texto");
+            builder.setMessage(descricao);
 
             AlertDialog.Builder positivo = builder.setPositiveButton("Fechar", (dialog, which) -> alert("Apoie-me clicando em Aplaudir"));
             alerta = builder.create();
@@ -108,6 +109,8 @@ public class LehakaActivity extends AppCompatActivity {
         lehakotExemploRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                descricao = dataSnapshot.child("description").getValue().toString();
+
                 if(dataSnapshot.child("isVotable").getValue().toString() == "true"){
                     isVotable = true;
                 } else {
@@ -144,6 +147,8 @@ public class LehakaActivity extends AppCompatActivity {
                         horarios
                 );
                 horarioLehakotExemplo.setAdapter(adaptadorHorario);
+
+
             }
 
             @Override
@@ -152,7 +157,7 @@ public class LehakaActivity extends AppCompatActivity {
         btnVotar = findViewById(R.id.btnVotarBetarId);
         btnVotar.setOnClickListener(v -> {
             if(isVotable) {
-                alert("Obrigado por votar");
+                alert("Obrigado pelo apoio!");
                 palmas += 1;
                 lehakotExemploRef.child("kapaim").setValue(palmas);
             }
