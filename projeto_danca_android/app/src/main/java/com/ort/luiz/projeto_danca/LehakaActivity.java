@@ -1,9 +1,11 @@
 package com.ort.luiz.projeto_danca;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,7 +28,7 @@ public class LehakaActivity extends AppCompatActivity {
     DatabaseReference acontecendoRef, lehakotExemploRef;
 
     TextView scrollingText;
-    Button btnVoltarLeakotExemplo, btnFacebook, btnInstagram, btnInternet, btnVotar;
+    Button btnVoltarLeakotExemplo, btnFacebook, btnInstagram, btnInternet, btnVotar, btnDescricao;
 
     ImageView imagemFundo;
 
@@ -42,6 +44,8 @@ public class LehakaActivity extends AppCompatActivity {
     String urlNet = "";
     String urlFace = "";
     String urlInsta = "";
+
+    private AlertDialog alerta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +74,19 @@ public class LehakaActivity extends AppCompatActivity {
             }
             finish();
 
+        });
+
+        btnDescricao = findViewById(R.id.btnDescricaoId);
+        btnDescricao.setOnClickListener((V) -> {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            builder.setTitle("Descrição");
+
+            builder.setMessage("Texto");
+
+            AlertDialog.Builder positivo = builder.setPositiveButton("Fechar", (dialog, which) -> alert("Apoie-me clicando em Aplaudir"));
+            alerta = builder.create();
+            alerta.show();
         });
 
         database = FirebaseDatabase.getInstance();
