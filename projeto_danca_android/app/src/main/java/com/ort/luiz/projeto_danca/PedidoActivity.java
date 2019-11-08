@@ -48,14 +48,12 @@ public class PedidoActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) { }});
 
         btnVoltarEventos = findViewById(R.id.btnVoltarEventosId);
-        btnEnviar = findViewById(R.id.btnEnviarId);
-
         btnVoltarEventos.setOnClickListener((V)->{
             btnVoltarEventos.setBackgroundResource(R.color.White);
             startActivity(new Intent(this, MainActivity.class));
         });
 
-
+        btnEnviar = findViewById(R.id.btnEnviarId);
         btnEnviar.setOnClickListener((v -> {
             idRef = database.getReference("PedidosAndroid");
             idRef.addValueEventListener(new ValueEventListener() {
