@@ -19,9 +19,9 @@ import java.util.Date;
 
 public class PedidoActivity extends AppCompatActivity {
     FirebaseDatabase database;
-    DatabaseReference idRef;
+    DatabaseReference idRef, acontecendoRef;
 
-    TextView txtPedido;
+    TextView txtPedido, scrollingText;
     Button btnVoltarEventos, btnEnviar;
 
     String id;
@@ -32,6 +32,20 @@ public class PedidoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pedido);
 
         database = FirebaseDatabase.getInstance();
+
+        scrollingText = findViewById(R.id.scrollingTextId6);
+
+        acontecendoRef = database.getReference("Acontecendo_agora");
+        acontecendoRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                scrollingText = findViewById(R.id.scrollingTextId6);
+                String valor = dataSnapshot.getValue().toString();
+                scrollingText.setText(valor);
+                scrollingText.setSelected(true);
+            }
+            @Override
+            public void onCancelled(DatabaseError databaseError) { }});
 
         btnVoltarEventos = findViewById(R.id.btnVoltarEventosId);
         btnEnviar = findViewById(R.id.btnEnviarId);
