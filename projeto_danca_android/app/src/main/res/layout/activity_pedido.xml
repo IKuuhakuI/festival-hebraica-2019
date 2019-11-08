@@ -7,6 +7,36 @@
     android:background="@android:color/background_light"
     tools:context=".PedidoActivity">
 
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="69dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hebraica" />
+
+    <TextView
+        android:id="@+id/scrollingTextId6"
+        android:layout_width="292dp"
+        android:layout_height="29dp"
+
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="28dp"
+        android:background="#fff"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Conecte-se a internet para receber as notificações"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btnVoltarEventosId"
         android:layout_width="wrap_content"
@@ -50,12 +80,26 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="177dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="268dp"
         android:text="@string/pedido"
         android:textColor="@color/Black"
         app:layout_constraintBottom_toTopOf="@+id/txtPedidoId"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollingTextId6" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="256dp"
+        android:layout_height="284dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarEventosId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviarId"
+        app:srcCompat="@drawable/icon_app" />
 
 </android.support.constraint.ConstraintLayout>
