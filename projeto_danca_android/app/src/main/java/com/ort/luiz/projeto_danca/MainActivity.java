@@ -1,7 +1,6 @@
 package com.ort.luiz.projeto_danca;
 
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference acontecendoRef;
 
     TextView scrollingText;
-    Button btnEventos, btnLeakot, btnKapaim, btnSugerir;
+    Button btnEventos, btnLeakot, btnOrdem, btnSugerir;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, SelectLeakotActivity.class));
         });
 
-        btnKapaim = findViewById(R.id.btnKapaimId);
-        btnKapaim.setOnClickListener(V->{
-            btnKapaim.setBackgroundResource(R.color.White);
-            startActivity(new Intent(this, KapaimActivity.class));
+        btnOrdem = findViewById(R.id.btnOrdemDosShowsId);
+        btnOrdem.setOnClickListener(V->{
+            btnOrdem.setBackgroundResource(R.color.White);
+            startActivity(new Intent(this, OrdemActivity.class));
         });
 
         btnSugerir = findViewById(R.id.btnSugerirId);

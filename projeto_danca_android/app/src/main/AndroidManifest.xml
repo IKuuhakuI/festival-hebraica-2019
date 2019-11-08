@@ -15,7 +15,8 @@
         android:roundIcon="@drawable/icon_app_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PedidoActivity"></activity>
+        <activity android:name=".OrdemActivity"></activity>
+        <activity android:name=".PedidoActivity" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
