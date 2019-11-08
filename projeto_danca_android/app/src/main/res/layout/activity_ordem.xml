@@ -18,6 +18,58 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <Button
+        android:id="@+id/btnVoltarOrdemId2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/White"
+        android:text="Show 1"
+        app:layout_constraintEnd_toStartOf="@+id/btnVoltarOrdemId3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <Button
+        android:id="@+id/btnVoltarOrdemId3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/White"
+        android:text="Show 2"
+        app:layout_constraintEnd_toStartOf="@+id/btnVoltarOrdemId4"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltarOrdemId2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <Button
+        android:id="@+id/btnVoltarOrdemId4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/White"
+        android:text="Show 3"
+        app:layout_constraintEnd_toStartOf="@+id/btnVoltarOrdemId5"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltarOrdemId3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
+    <Button
+        android:id="@+id/btnVoltarOrdemId5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/White"
+        android:text="Show 4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltarOrdemId4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+
     <ImageView
         android:id="@+id/imageView26"
         android:layout_width="69dp"
@@ -47,4 +99,19 @@
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/imageView26"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVoltarOrdemId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltarOrdemId3"
+        app:srcCompat="@drawable/icon_app" />
+
 </android.support.constraint.ConstraintLayout>
