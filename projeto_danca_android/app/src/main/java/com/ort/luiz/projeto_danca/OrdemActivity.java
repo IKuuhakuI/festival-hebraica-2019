@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,6 +22,8 @@ public class OrdemActivity extends AppCompatActivity {
     Button btnVoltarOrdem, btnShow1, btnShow2, btnShow3, btnShow4;
 
     String selecionado;
+
+    ImageView imagemFundo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,8 @@ public class OrdemActivity extends AppCompatActivity {
             startActivity(new Intent(this, MainActivity.class));
         });
 
+        imagemFundo = findViewById(R.id.imagemFundoId);
+
         btnShow1 = findViewById(R.id.btnShow1Id);
         btnShow2 = findViewById(R.id.btnShow2Id);
         btnShow3 = findViewById(R.id.btnShow3Id);
@@ -60,6 +65,8 @@ public class OrdemActivity extends AppCompatActivity {
             btnShow2.setBackgroundResource(R.drawable.button_border);
             btnShow3.setBackgroundResource(R.drawable.button_border);
             btnShow4.setBackgroundResource(R.drawable.button_border);
+
+            imagemFundo.setImageResource(getResources().getIdentifier("slide1", "drawable", getPackageName()));
         });
 
         btnShow2.setOnClickListener((V) -> {
@@ -68,6 +75,8 @@ public class OrdemActivity extends AppCompatActivity {
             btnShow2.setBackgroundResource(R.color.White);
             btnShow3.setBackgroundResource(R.drawable.button_border);
             btnShow4.setBackgroundResource(R.drawable.button_border);
+
+            imagemFundo.setImageResource(getResources().getIdentifier("slide2", "drawable", getPackageName()));
         });
 
         btnShow3.setOnClickListener((V) -> {
@@ -76,6 +85,8 @@ public class OrdemActivity extends AppCompatActivity {
             btnShow2.setBackgroundResource(R.drawable.button_border);
             btnShow3.setBackgroundResource(R.color.White);
             btnShow4.setBackgroundResource(R.drawable.button_border);
+
+            imagemFundo.setImageResource(getResources().getIdentifier("slide3", "drawable", getPackageName()));
         });
 
         btnShow4.setOnClickListener((V) -> {
@@ -84,6 +95,8 @@ public class OrdemActivity extends AppCompatActivity {
             btnShow2.setBackgroundResource(R.drawable.button_border);
             btnShow3.setBackgroundResource(R.drawable.button_border);
             btnShow4.setBackgroundResource(R.color.White);
+
+            imagemFundo.setImageResource(getResources().getIdentifier("slide4", "drawable", getPackageName()));
         });
     }
 
