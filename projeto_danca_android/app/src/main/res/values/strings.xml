@@ -1,15 +1,7 @@
 <resources>
     <string name="app_name">BeMachol</string>
-    <string name="lehakot">Lehakot</string>
-    <string name="programa_o">Programação</string>
+
     <string name="por_luiz_carlos_aguiar_carrion">Por: Luiz Carlos Aguiar Carrion</string>
-    <string name="todo">TODO</string>
-    <string name="kapaim">Kapaim</string>
-    <string name="sugerir_m_sicas">Sugerir Músicas</string>
-    <string name="conecte_se_a_internet_para_receber_as_notifica_es">Conecte-se a internet para receber as notificações</string>
-    <string name="pedido">Pedido</string>
-    <string name="email">Email</string>
-    <string name="voltar">Voltar</string>
-    <string name="nome">Nome</string>
-    <string name="enviar">Enviar</string>
+
+
 </resources>
