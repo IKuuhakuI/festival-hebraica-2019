@@ -83,12 +83,14 @@ public class SelectLeakotActivity extends AppCompatActivity {
                 }
                 intent.putExtra("lastPage", "lehaka");
                 startActivity(intent);
+                finish();
         });
 
         btnVoltarLeakot = findViewById(R.id.btnVoltarLeakotId);
         btnVoltarLeakot.setOnClickListener((V)->{
             btnVoltarLeakot.setBackgroundResource(R.color.White);
             startActivity(new Intent(this, MainActivity.class));
+            finish();
         });
 
         acontecendoRef = database.getReference("Acontecendo_agora");

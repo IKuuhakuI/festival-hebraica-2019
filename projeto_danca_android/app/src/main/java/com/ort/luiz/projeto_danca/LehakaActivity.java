@@ -72,8 +72,10 @@ public class LehakaActivity extends AppCompatActivity {
             btnVoltarLeakotExemplo.setBackgroundResource(R.color.White);
             if(lastPage == "kapaim"){
                 startActivity(new Intent(this, KapaimActivity.class));
+                finish();
             } else if(lastPage == "lehaka"){
                 startActivity(new Intent(this, SelectLeakotActivity.class));
+                finish();
             }
             finish();
 
