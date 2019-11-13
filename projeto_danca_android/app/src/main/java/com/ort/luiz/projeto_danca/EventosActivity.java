@@ -142,13 +142,13 @@ public class EventosActivity extends AppCompatActivity {
                     String dia;
 
                     if(selecionado == "Dia1" && (horaInicial != 00 && horaInicial != 01 && horaInicial != 02 && horaInicial != 03 && horaInicial != 04)){
-                        dia = "19/10";
+                        dia = "19/11";
                     } else if(selecionado == "Dia2" && (horaInicial != 00 && horaInicial != 01 && horaInicial != 02 && horaInicial != 03 && horaInicial != 04) || selecionado == "Dia1"){
-                        dia = "20/10";
+                        dia = "20/11";
                     } else if(selecionado == "Dia3" && (horaInicial != 00 && horaInicial != 01 && horaInicial != 02 && horaInicial != 03 && horaInicial != 04) || selecionado == "Dia2"){
-                        dia = "21/10";
+                        dia = "21/11";
                     } else {
-                        dia = "22/10";
+                        dia = "22/11";
                     }
 
                     dialogo = new AlertDialog.Builder(EventosActivity.this);
@@ -170,8 +170,8 @@ public class EventosActivity extends AppCompatActivity {
                         intent.putExtra("allDay", false);
                         intent.putExtra("eventLocation", local);
 
-                        cal.set(Calendar.YEAR, 2018);
-                        cal.set(Calendar.MONTH, 9);
+                        cal.set(Calendar.YEAR, 2019);
+                        cal.set(Calendar.MONTH, 10);
 
                         if(selecionado == "Dia1") {
                             if(horaInicial == 00 || horaInicial == 01 || horaInicial == 02 || horaInicial == 03 || horaInicial == 04) {
