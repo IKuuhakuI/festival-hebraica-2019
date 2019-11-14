@@ -18,6 +18,6 @@ Conheça melhor as lehakot que vão se apresentar, veja em qual show seus grupos
 
 Vote na sua Lehaká preferida ou na melhor torcida pelo feature Kapaim (palmas, em hebraico) que vai revelar o voto popular!!
 
-Além disso, a novidade do momento é a opção de fazer pedidos de música ao vivo! Com essa funcionalidade você pode enviar um pedido em tempo e ele será avaliado por nosso grupo!
+Além disso, a novidade do momento é a opção de fazer pedidos de música ao vivo! Com essa funcionalidade você pode enviar um pedido em tempo real e ele será avaliado por nosso grupo!
 
 Contamos também com a área Ordem dos Shows! Nela você terá um guia completo das apresentações para cada show para garantir que você terá o melhor proveito do evento!</p>
