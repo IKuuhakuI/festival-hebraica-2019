@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.ort.luiz.projeto_danca"
         minSdkVersion 22
-        targetSdkVersion 27
-        versionCode 3
-        versionName "1.1.1"
+        targetSdkVersion 28
+        versionCode 5
+        versionName "2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
