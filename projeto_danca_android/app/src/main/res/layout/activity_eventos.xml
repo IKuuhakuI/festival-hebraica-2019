@@ -93,26 +93,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="80dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnVoltarEventosId"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewId"
-        app:srcCompat="@drawable/estrela" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="80dp"
-        android:layout_height="69dp"
-        android:layout_marginTop="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnVoltarEventosId"
-        app:layout_constraintTop_toBottomOf="@+id/listViewId"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/estrela" />
 </android.support.constraint.ConstraintLayout>
