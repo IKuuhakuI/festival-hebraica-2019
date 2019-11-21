@@ -8,6 +8,28 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/tgb" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="125dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:srcCompat="@drawable/marca_klabin" />
+
+    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="69dp"
         android:layout_height="69dp"
@@ -40,8 +62,8 @@
 
     <Button
         android:id="@+id/btnEventosId"
-        android:layout_width="206dp"
-        android:layout_height="0dp"
+        android:layout_width="156dp"
+        android:layout_height="45dp"
         android:layout_marginTop="16dp"
         android:background="@color/White"
         android:text="programação"
@@ -52,7 +74,7 @@
 
     <Button
         android:id="@+id/btnLeakotId"
-        android:layout_width="209dp"
+        android:layout_width="156dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@color/White"
@@ -99,7 +121,7 @@
 
     <Button
         android:id="@+id/btnOrdemDosShowsId"
-        android:layout_width="209dp"
+        android:layout_width="156dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@color/White"
@@ -111,7 +133,7 @@
 
     <Button
         android:id="@+id/btnSugerirId"
-        android:layout_width="209dp"
+        android:layout_width="156dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:background="@color/White"
@@ -123,8 +145,8 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="330dp"
-        android:layout_height="170dp"
+        android:layout_width="339dp"
+        android:layout_height="134dp"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/btnEventosId"
