@@ -76,7 +76,7 @@ public class SelectLeakotActivity extends AppCompatActivity {
 
         listaItens.setOnItemClickListener((parent, view, position, id) -> {
                 Intent intent = new Intent(SelectLeakotActivity.this, LehakaActivity.class);
-                if(position < 25){
+                if(position < 24){
                     intent.putExtra("id", Integer.toString(position+1));
                 } else {
                     intent.putExtra("id", Integer.toString(position+3));
