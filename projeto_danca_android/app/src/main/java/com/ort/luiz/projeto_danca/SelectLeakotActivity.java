@@ -46,9 +46,9 @@ public class SelectLeakotActivity extends AppCompatActivity {
         lehakotRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                    for (int i = 1; i < 62; i++) {
-                        if(i == 25){
-                           i += 2;
+                    for (int i = 1; i < 79; i++) {
+                        if (i == 1 || i == 8 || i == 20 || i == 25 || i == 26 || i == 30 || i == 32 || i == 33 || i == 36 || i == 48 || i == 49 || i == 53 || i == 55){
+                            continue;
                         }
                             String nomeAtual;
 
@@ -76,11 +76,53 @@ public class SelectLeakotActivity extends AppCompatActivity {
 
         listaItens.setOnItemClickListener((parent, view, position, id) -> {
                 Intent intent = new Intent(SelectLeakotActivity.this, LehakaActivity.class);
-                if(position < 24){
-                    intent.putExtra("id", Integer.toString(position+1));
-                } else {
+
+                // VERIFICADO
+                if(position < 6){
+                    intent.putExtra("id", Integer.toString(position+2));
+                }
+
+                // VERIFICADO
+                else if(position < 17){
                     intent.putExtra("id", Integer.toString(position+3));
                 }
+
+                // VERIFICADO
+                else if(position < 21){
+                    intent.putExtra("id", Integer.toString(position+4));
+                }
+
+                // VERIFICADO (21 = HABONITO = 27)
+                else if(position < 24){
+                    intent.putExtra("id", Integer.toString(position+6));
+                }
+
+                // VERIFICADO
+                else if(position < 25){
+                    intent.putExtra("id", Integer.toString(position+7));
+                }
+
+                // VERIFICADO
+                else if(position < 27){
+                    intent.putExtra("id", Integer.toString(position+9));
+                }
+
+                // VERIFICADO
+                else if(position < 38){
+                    intent.putExtra("id", Integer.toString(position+10));
+                }
+
+                // VERIFICADO
+                else if(position < 41){
+                    intent.putExtra("id", Integer.toString(position+12));
+                }
+
+                // VERIFICADO
+                else{
+                    intent.putExtra("id", Integer.toString(position+14));
+                }
+
+
                 intent.putExtra("lastPage", "lehaka");
                 startActivity(intent);
                 finish();
