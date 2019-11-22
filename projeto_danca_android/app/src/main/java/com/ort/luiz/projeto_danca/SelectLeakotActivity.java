@@ -60,8 +60,7 @@ public class SelectLeakotActivity extends AppCompatActivity {
                     }
                     if(count == 0){
                         adaptador = new ArrayAdapter<>(getApplicationContext(),
-                        android.R.layout.simple_list_item_1,
-                        android.R.id.text1,
+                        R.layout.row,
                         nomes);
                         listaItens.setAdapter(adaptador);
                         count++;
