@@ -142,8 +142,7 @@ public class LehakaActivity extends AppCompatActivity {
 
                 ArrayAdapter<String> adaptadorHorario = new ArrayAdapter<>(
                         getApplicationContext(), // contexto da aplicação
-                        android.R.layout.simple_list_item_1, // layout
-                        android.R.id.text1, // id do layout
+                        R.layout.row_lehaka,
                         horarios
                 );
                 horarioLehakotExemplo.setAdapter(adaptadorHorario);

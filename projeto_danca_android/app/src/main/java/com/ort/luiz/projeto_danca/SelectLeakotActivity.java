@@ -3,8 +3,6 @@ package com.ort.luiz.projeto_danca;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -60,7 +58,7 @@ public class SelectLeakotActivity extends AppCompatActivity {
                     }
                     if(count == 0){
                         adaptador = new ArrayAdapter<>(getApplicationContext(),
-                        R.layout.row,
+                        R.layout.row_select_lehakot,
                         nomes);
                         listaItens.setAdapter(adaptador);
                         count++;
