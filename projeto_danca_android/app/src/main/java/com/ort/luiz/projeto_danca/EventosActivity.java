@@ -115,8 +115,7 @@ public class EventosActivity extends AppCompatActivity {
                 listaItens = findViewById(R.id.listViewId);
                 ArrayAdapter<String> adaptador = new ArrayAdapter<>(
                         getApplicationContext(),
-                        android.R.layout.simple_list_item_1,
-                        android.R.id.text1,
+                        R.layout.row_event,
                         itens
                 );
 
